@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_shadow/flutter_inner_shadow.dart';
-import 'package:hotel/data/core/constant/const_sizes.dart';
+import 'package:hotel/data/core/constant/constants.dart';
 
 class MyInnerShadow extends StatelessWidget {
   const MyInnerShadow({
@@ -46,9 +46,9 @@ class MyInnerShadow extends StatelessWidget {
               child: Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: MyColors.textColor,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),

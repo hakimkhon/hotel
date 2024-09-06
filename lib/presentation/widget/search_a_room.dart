@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel/data/core/constant/const_sizes.dart';
+import 'package:hotel/data/core/constant/constants.dart';
 import 'package:hotel/presentation/widget/drop_dawn_buttom.dart';
 import 'package:hotel/presentation/widget/inner_shadow.dart';
 
@@ -27,8 +27,8 @@ class _SearchARoomState extends State<SearchARoom> {
             children: [
               MyInnerShadow(
                 title: "Place",
-                height: 70,
-                width: 220,
+                height: 65,
+                width: 230,
               ),
               Spacer(),
               DropDawnButtom(title: "Guests")
@@ -38,11 +38,11 @@ class _SearchARoomState extends State<SearchARoom> {
             children: [
               MyInnerShadow(
                 title: "Date",
-                height: 70,
-                width: 220,
+                height: 65,
+                width: 230,
               ),
               Spacer(),
-              DropDawnButtom(title: "Night")
+              DropDawnButtom(title: "Nights")
             ],
           ),
            Container(

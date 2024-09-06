@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel/data/core/constant/constants.dart';
 
 class DropDawnButtom extends StatefulWidget {
   const DropDawnButtom({super.key, required this.title});
@@ -23,9 +24,9 @@ class _DropDawnButtomState extends State<DropDawnButtom> {
         hint: Text(
           widget.title,
           style: const TextStyle(
-            fontSize: 20,
-            color: Colors.grey,
-            fontWeight: FontWeight.w600,
+            fontSize: 18,
+            color: MyColors.textColor,
+            fontWeight: FontWeight.w400,
           ),
         ),
         items: itemsPlace
@@ -34,9 +35,9 @@ class _DropDawnButtomState extends State<DropDawnButtom> {
                   child: Text(
                     item,
                     style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: MyColors.textColor,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -50,22 +51,22 @@ class _DropDawnButtomState extends State<DropDawnButtom> {
           });
         },
         buttonStyleData: ButtonStyleData(
-          height: 60,
-          width: 130,
-          padding: const EdgeInsets.only(left: 15, right: 15),
+          height: 55,
+          width: 120,
+          padding: const EdgeInsets.only(left: 12, right: 12),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
-            color: const Color.fromRGBO(25, 26, 29, 1),
+            color: MyColors.dropColor,
             boxShadow: const [
               BoxShadow(
                 color: Color.fromRGBO(41, 42, 47, 1),
-                offset: Offset(-5, -5),
+                offset: Offset(-7, -7),
                 blurRadius: 10,
-                spreadRadius: -1,
+                spreadRadius: 0,
               ),
               BoxShadow(
                 color: Color.fromRGBO(0, 0, 0, 1),
-                offset: Offset(5, 5),
+                offset: Offset(7, 7),
                 blurRadius: 10,
                 spreadRadius: -8,
               ),
@@ -76,7 +77,7 @@ class _DropDawnButtomState extends State<DropDawnButtom> {
         iconStyleData: const IconStyleData(),
         dropdownStyleData: DropdownStyleData(
           maxHeight: 240,
-          width: 130,
+          width: 110,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             color: const Color.fromRGBO(25, 26, 29, 1),
