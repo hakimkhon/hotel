@@ -18,5 +18,7 @@ class MyColors {
   static const dropColor = Color.fromRGBO(25, 26, 29, 1);
   static const textColor = Color.fromRGBO(153, 153, 153, 1);
   static const textColorBgWight = Color.fromRGBO(57, 57, 57, 1);
+    static const bgDarkColor = Color.fromARGB(255, 35, 40, 45);
+  static const selectedItemColor = Color.fromARGB(255, 160, 10, 10);
 
 }
