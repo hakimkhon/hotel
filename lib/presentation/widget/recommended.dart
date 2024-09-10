@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/data/core/constant/constants.dart';
 import 'package:hotel/data/core/resource/assets_path.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class Recommended extends StatelessWidget {
   const Recommended({super.key});
@@ -13,7 +14,7 @@ class Recommended extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Padding(
-            padding: EdgeInsets.only(top: 24, left: 24),
+            padding: EdgeInsets.only(top: 28, left: 24, bottom: 16),
             child: Text(
               'Recommended',
               style: TextStyle(
@@ -24,7 +25,7 @@ class Recommended extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 200,
+            height: 180,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -42,15 +43,18 @@ class Recommended extends StatelessWidget {
   }
 
   Widget itemImageList(String image) {
-    return Container(
-      width: 270,
-      height: 180,
-      margin: EdgeInsets.only(left: 24),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: Colors.grey
+    return ZoomTapAnimation(
+      child: Container(
+        width: 270,
+        // height: 160,
+        margin: const EdgeInsets.only(left: 24),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: AssetImage(image),
+              fit: BoxFit.fill,
+            )),
       ),
-      child: Image.asset(image, fit: BoxFit.fill,),
     );
   }
 }

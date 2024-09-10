@@ -10,7 +10,6 @@ class ConstSizes{
     return MediaQuery.of(context).size.width * sizeWidth / 100;
   }
 }
-
 class MyColors {
   static const bgColor = Color.fromRGBO(0, 0, 0, 0.6);
   static const darkColor = Color.fromRGBO(25, 26, 29, 1);

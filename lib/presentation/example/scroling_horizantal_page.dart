@@ -10,15 +10,28 @@ class ScrolingHorizantalPage extends StatefulWidget {
 class _ScrolingHorizantalPageState extends State<ScrolingHorizantalPage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-      ),
+  
       body: SafeArea(
         child: ListView(
           children: [
             test(Colors.black),
-            test(Colors.grey),
+            Container(
+              alignment: Alignment.bottomLeft,
+              height: 200,
+              width: 300,
+              color: Colors.blue,
+              child: Stack(
+                children: [
+                  Container(
+                    height: 150,
+                    width: 200,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
+            ),
             SizedBox(
               height: 200,
               width: 600,

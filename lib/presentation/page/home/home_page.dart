@@ -4,7 +4,7 @@ import 'package:hotel/presentation/screen/Home.dart';
 import 'package:hotel/presentation/screen/notifications.dart';
 import 'package:hotel/presentation/screen/search.dart';
 import 'package:hotel/presentation/screen/user.dart';
-
+import 'package:hotel/presentation/widget/drop_shadow.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,39 +24,49 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SizedBox(
+        height: ConstSizes.height(100, context),
         child: pages[currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: MyColors.bgColor,
+        backgroundColor: MyColors.darkColor,
         currentIndex: currentIndex,
-        selectedItemColor: MyColors.selectedItemColor,
-        unselectedItemColor: MyColors.bgDarkColor,
+        selectedItemColor: Colors.pink,
+        unselectedItemColor: Colors.white,
         onTap: (value) {
           currentIndex = value;
           setState(() {});
         },
-        items: const [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.home, size: 36),
+            label: "Home",
+            icon: DropShadow(
+              height: 60,
+              width: 60,
+              radius: 10,
+              child: Icon(Icons.home, size: 32),
+            ),
           ),
           BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.search_rounded, size: 36),
+            label: "Home",
+            icon: Icon(Icons.search_rounded, size: 32),
           ),
           BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.notifications, size: 36),
+            label: "Home",
+            icon: Icon(Icons.notifications, size: 32) , 
           ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(Icons.person, size: 36),
-          ),
-        ],
+         ],
       ),
     );
   }
 }
+
+
+
+
+
+        // items: const [
+       
+        // ],

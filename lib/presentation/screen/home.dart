@@ -11,10 +11,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
+        SizedBox(
           width: double.infinity,
           height: ConstSizes.height(68, context),
-          color: Colors.green,
           child: Stack(
             children: [
               Positioned(
@@ -42,7 +41,8 @@ class Home extends StatelessWidget {
                 child: SizedBox(
                   width: ConstSizes.width(90, context),
                   child: const Text(
-                    'Find place that gives you ultimate calm',
+                    // 'Find place that gives you ultimate calm',
+                    "Uzchasys MCHJ QK ",
                     style: TextStyle(
                       fontSize: 36,
                       color: Colors.white,
