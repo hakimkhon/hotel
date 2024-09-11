@@ -7,6 +7,7 @@ class ImageAssets {
   static const String hotel_3 = "$imagePath/hotel_dence_royal.jpg";  
   static const String hotel_4 = "$imagePath/mountain_resort.jpg";  
   static const String hotel_5 = "$imagePath/ocean_view_hotel.jpg";  
+  static const String map = "$imagePath/map.jpg";  
 }
 class LottieAssets {
   static const String lottieName = "$lottiePath/splash_lottie.json";  

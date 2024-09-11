@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/data/core/constant/constants.dart';
 import 'package:hotel/presentation/widget/drop_down_interval.dart';
+import 'package:hotel/presentation/widget/map_widget.dart';
 import 'package:hotel/presentation/widget/mountain_resort.dart';
 import 'package:hotel/presentation/widget/near_the_beaches.dart';
 
-class SearchBtnClickedScreen extends StatefulWidget {
-  const SearchBtnClickedScreen({super.key});
+class ViewOnMapScreen extends StatefulWidget {
+  const ViewOnMapScreen({super.key});
 
   @override
-  State<SearchBtnClickedScreen> createState() => _SearchBtnClickedScreenState();
+  State<ViewOnMapScreen> createState() => _ViewOnMapScreenState();
 }
 
-class _SearchBtnClickedScreenState extends State<SearchBtnClickedScreen> {
+class _ViewOnMapScreenState extends State<ViewOnMapScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -51,8 +52,7 @@ class _SearchBtnClickedScreenState extends State<SearchBtnClickedScreen> {
                 ],
               ),
             ),
-            NearTheBeaches(),
-            MountainResort(),
+            MapWidget(),
           ],
         ),
       ),

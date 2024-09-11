@@ -4,8 +4,8 @@ import 'package:hotel/data/core/resource/assets_path.dart';
 import 'package:hotel/presentation/widget/recommended.dart';
 import 'package:hotel/presentation/widget/search_a_room.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

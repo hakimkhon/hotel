@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:hotel/data/core/resource/assets_path.dart';
+import 'package:hotel/data/routes/app_routes.dart';
+import 'package:hotel/presentation/widget/stak_five_star.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class NearTheBeaches extends StatelessWidget {
@@ -25,7 +26,7 @@ class NearTheBeaches extends StatelessWidget {
         ),
         Container(
           alignment: Alignment.bottomLeft,
-          color: Colors.white,
+          // color: Colors.white,
           height: 160,
           child: ListView(
             scrollDirection: Axis.horizontal,
@@ -33,39 +34,17 @@ class NearTheBeaches extends StatelessWidget {
               // itemImageList(ImageAssets.hotel_1),
               Stack(
                 children: [
-                  itemImageList(ImageAssets.hotel_2),
-                  Positioned(
+                  itemImageList(context, ImageAssets.hotel_2),
+                  const Positioned(
                     right: 0,
-                    top: -20,
-                    child: Container(
-                      width: 50,
-                      height: 26,
-                      padding: const EdgeInsets.symmetric(horizontal: 6),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.pink),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '4.5',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Spacer(),
-                          Icon(Icons.star, size: 14, color: Colors.white)
-                        ],
-                      ),
-                    ),
+                    top: 0,
+                    child: StakFiveStar(),
                   ),
                 ],
               ),
-              itemImageList(ImageAssets.hotel_3),
-              itemImageList(ImageAssets.hotel_4),
-              itemImageList(ImageAssets.hotel_5),
+              itemImageList(context, ImageAssets.hotel_3),
+              itemImageList(context, ImageAssets.hotel_4),
+              itemImageList(context, ImageAssets.hotel_5),
             ],
           ),
         )
@@ -73,13 +52,16 @@ class NearTheBeaches extends StatelessWidget {
     );
   }
 
-  Widget itemImageList(String image) {
+  Widget itemImageList(context, String image) {
     return ZoomTapAnimation(
+      onTap: () {
+        Navigator.pushNamed(context, HotelRouteNames.map);
+      },
       child: Stack(
         children: [
           Container(
             alignment: Alignment.bottomLeft,
-            padding: EdgeInsets.only(left: 10, bottom: 16),
+            padding: const EdgeInsets.only(left: 10, bottom: 16),
             width: 250,
             height: 140,
             margin: const EdgeInsets.only(left: 18),

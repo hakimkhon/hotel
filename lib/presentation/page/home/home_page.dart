@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/data/core/constant/constants.dart';
-import 'package:hotel/presentation/screen/Home.dart';
-import 'package:hotel/presentation/screen/notifications.dart';
-import 'package:hotel/presentation/screen/search.dart';
-import 'package:hotel/presentation/screen/user.dart';
+import 'package:hotel/presentation/page/notification/notifications.dart';
+import 'package:hotel/presentation/page/search/search.dart';
+import 'package:hotel/presentation/page/user/user.dart';
+import 'package:hotel/presentation/screen/home_screen.dart';
 import 'package:hotel/presentation/widget/drop_shadow.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   List pages = const [
-    Home(),
+    HomeScreen(),
     Search(),
     Notifications(),
     User(),
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            label: "Home",
+            label: "",
             icon: DropShadow(
               height: 60,
               width: 60,
@@ -50,23 +50,19 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           BottomNavigationBarItem(
-            label: "Home",
+            label: "",
             icon: Icon(Icons.search_rounded, size: 32),
           ),
           BottomNavigationBarItem(
-            label: "Home",
+            label: "",
             icon: Icon(Icons.notifications, size: 32) , 
           ),
+          // BottomNavigationBarItem(
+          //   label: "",
+          //   icon: Icon(Icons.person, size: 32) , 
+          // ),
          ],
       ),
     );
   }
 }
-
-
-
-
-
-        // items: const [
-       
-        // ],
