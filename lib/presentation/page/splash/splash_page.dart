@@ -15,7 +15,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 1), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.pushNamedAndRemoveUntil(
         context,
         HotelRouteNames.home,

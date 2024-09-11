@@ -36,7 +36,8 @@ class Recommended extends StatelessWidget {
                 itemImageList(ImageAssets.hotel_5),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );
