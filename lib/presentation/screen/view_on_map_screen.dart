@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotel/data/core/constant/constants.dart';
 import 'package:hotel/presentation/widget/drop_down_interval.dart';
 import 'package:hotel/presentation/widget/map_widget.dart';
-import 'package:hotel/presentation/widget/mountain_resort.dart';
-import 'package:hotel/presentation/widget/near_the_beaches.dart';
+
 
 class ViewOnMapScreen extends StatefulWidget {
   const ViewOnMapScreen({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/data/core/resource/assets_path.dart';
 import 'package:hotel/data/routes/app_routes.dart';
+import 'package:hotel/presentation/widget/images_list_widget.dart';
 import 'package:hotel/presentation/widget/stak_five_star.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -30,21 +31,33 @@ class NearTheBeaches extends StatelessWidget {
           height: 160,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: [
-              // itemImageList(ImageAssets.hotel_1),
+            children: const [
               Stack(
                 children: [
-                  itemImageList(context, ImageAssets.hotel_2),
-                  const Positioned(
+                  ImagesListWidget(
+                      image: ImageAssets.hotel_2, myroute: HotelRouteNames.map),
+                  Positioned(
                     right: 0,
                     top: 0,
                     child: StakFiveStar(),
                   ),
                 ],
               ),
-              itemImageList(context, ImageAssets.hotel_3),
-              itemImageList(context, ImageAssets.hotel_4),
-              itemImageList(context, ImageAssets.hotel_5),
+              ImagesListWidget(
+                image: ImageAssets.hotel_3,
+                myroute: HotelRouteNames.map,
+                title: "Hotel 3",
+              ),
+              ImagesListWidget(
+                image: ImageAssets.hotel_4,
+                myroute: HotelRouteNames.map,
+                title: "Hotel 4",
+              ),
+              ImagesListWidget(
+                image: ImageAssets.hotel_5,
+                myroute: HotelRouteNames.map,
+                title: "Hotel 5",
+              ),
             ],
           ),
         )
