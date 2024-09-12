@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel/presentation/example/scroling_horizantal_page.dart';
+import 'package:hotel/presentation/example/for_example.dart';
 import 'package:hotel/presentation/page/home/home_page.dart';
 import 'package:hotel/presentation/page/splash/splash_page.dart';
 import 'package:hotel/presentation/screen/search_btn_clicked_screen.dart';
@@ -27,7 +27,7 @@ class HotelRoute {
       case HotelRouteNames.map:
         return MaterialPageRoute(builder: (context) => const ViewOnMapScreen());
       case HotelRouteNames.example:
-        return MaterialPageRoute(builder: (context) => const ScrolingHorizantalPage());
+        return MaterialPageRoute(builder: (context) => const ForExample());
       default:
         return MaterialPageRoute(builder: (context) => const HomePage());
     }

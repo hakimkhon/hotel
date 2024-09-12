@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
        navigatorKey: NavigationService.instance.navigatorKey,
       onGenerateRoute: HotelRoute.generateRoute,
-      initialRoute: HotelRouteNames.home,
+      initialRoute: HotelRouteNames.example,
     );
   }
 }
