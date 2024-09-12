@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/data/core/resource/assets_path.dart';
+import 'package:hotel/data/routes/app_routes.dart';
+import 'package:hotel/presentation/widget/images_list_widget.dart';
+import 'package:hotel/presentation/widget/stak_five_star.dart';
 import 'package:hotel/presentation/widget/stak_price.dart';
 
 class MapWidget extends StatelessWidget {
@@ -54,6 +57,40 @@ class MapWidget extends StatelessWidget {
               width: 500,
               height: 200,
               color: Colors.red,
+              child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: const [
+              Stack(
+                children: [
+                  ImagesListWidget(
+                      image: ImageAssets.hotel_2,
+                      title: "Mounten Reost",
+                      myroute: HotelRouteNames.example),
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: StakFiveStar(),
+                  ),
+                ],
+              ),
+              ImagesListWidget(
+                  image: ImageAssets.hotel_1,
+                  title: "Test",
+                  myroute: HotelRouteNames.map),
+              ImagesListWidget(
+                  image: ImageAssets.hotel_3,
+                  title: "Test",
+                  myroute: HotelRouteNames.map),
+              ImagesListWidget(
+                  image: ImageAssets.hotel_4,
+                  title: "Test",
+                  myroute: HotelRouteNames.map),
+              ImagesListWidget(
+                  image: ImageAssets.hotel_5,
+                  title: "Test",
+                  myroute: HotelRouteNames.map),
+            ],
+          ),
             ),
           ),
         ],
